@@ -1,66 +1,107 @@
 <!DOCTYPE html>
-<html lang="mr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>साईप्रसाद किराणा स्टोअर्स - घोषणा</title>
+    <title>Product Page</title>
     <style>
         body {
-            background-color: #f9f7e6;
-            color: #4a3c2a;
             font-family: Arial, sans-serif;
-            line-height: 1.6;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            margin: 0;
+            padding: 0;
+            color: #333;
         }
-        h1, h2, h3 {
-            color: #924a20;
+        header {
+            padding: 20px;
+            text-align: center;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            font-size: 2.5em;
+            animation: glow 1.5s infinite alternate;
+        }
+        @keyframes glow {
+            0% { text-shadow: 0 0 10px #fffb78; }
+            100% { text-shadow: 0 0 20px #fffb78; }
         }
         .container {
-            width: 80%;
+            max-width: 1200px;
             margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
             padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        footer {
+        .product {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+            margin: 15px;
+            padding: 20px;
+            flex: 0 0 30%;
             text-align: center;
-            padding: 10px 0;
-            background-color: #924a20;
+            transition: transform 0.2s;
+        }
+        .product:hover {
+            transform: scale(1.05);
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .add-to-cart {
+            background-color: #ff4757;
             color: white;
-            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+        .add-to-cart:hover {
+            background-color: #ff6b81;
+        }
+        @media (max-width: 768px) {
+            .product {
+                flex: 0 0 45%;
+                margin: 10px;
+            }
+        }
+        @media (max-width: 480px) {
+            .product {
+                flex: 0 0 90%;
+                margin: 5px;
+            }
         }
     </style>
 </head>
 <body>
+    <header>
+        <h1>Welcome to Our Awesome Product Store! 🛒</h1>
+    </header>
     <div class="container">
-        <h1>स्वागत आहे साईप्रसाद किराणा स्टोअर्समध्ये!</h1>
-        <p>आपल्या सर्व किराणाच्या गरजांसाठी सर्वोत्कृष्ट ठिकाण.</p>
-        <h2>उत्पादन श्रेणी:</h2>
-        <ul>
-            <li>धान्य व मसाले</li>
-            <li>ताजा भाज्या व फळे</li>
-            <li>दुध व दुग्धजन्य उत्पादने</li>
-            <li>मीट व मच्छी</li>
-            <li>स्नॅक्स व मिठाई</li>
-            <li>आहारपूरक आणि सौंदर्य उत्पादनं</li>
-        </ul>
-        <h2>विशेषताएं:</h2>
-        <p>आम्ही ग्राहकांना गुणवत्तेची व आश्वासक सेवा देण्यासाठी प्रतिबद्ध आहोत. आमची विशेष वैशिष्ट्यं:
-        </p>
-        <ul>
-            <li>ताजेपणाची हमी</li>
-            <li>स्पर्धात्मक किंमती</li>
-            <li>विनम्र आणि सहनशील कर्मचारी</li>
-            <li>सुपरफास्ट होम डिलिव्हरी</li>
-        </ul>
-        <h2>संपर्क माहिती:</h2>
-        <p>आपल्या सर्व प्रश्नांसाठी, कृपया आमच्याशी संपर्क साधा:</p>
-        <p>फोन: +91 9988776655<br>
-        ई-मेल: info@saiprasadstore.com<br>
-        पत्ता: साईप्रसाद किराणा स्टोअर्स, मुख्य बाजार, मुंबई, भारत.</p>
+        <div class="product">
+            <img src="https://via.placeholder.com/300x200" alt="Product Image">
+            <h2>Product 1 🌟</h2>
+            <p>Description of Product 1.</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/300x200" alt="Product Image">
+            <h2>Product 2 🌟</h2>
+            <p>Description of Product 2.</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/300x200" alt="Product Image">
+            <h2>Product 3 🌟</h2>
+            <p>Description of Product 3.</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
     </div>
-    <footer>
-        <p>साईप्रसाद किराणा स्टोअर्स - आपल्या थोक आणि किराणा वस्तूंची सर्वात मोठी निवडक ठिकाण.</p>
-    </footer>
 </body>
 </html>
